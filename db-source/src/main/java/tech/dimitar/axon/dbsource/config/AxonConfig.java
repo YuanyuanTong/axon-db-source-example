@@ -55,22 +55,22 @@ public class AxonConfig {
         return new JpaTransactionManager(entityManagerFactory);
     }
 
-    @Bean
-    XStream xstream(){
-        XStream xstream = new XStream();
-        xstream.addPermission(NoTypePermission.NONE);
-        xstream.allowTypesByWildcard(new String[] {
-                "tech.dimitar.**",
-                "org.axonframework.**",
-                "java.**",
-                "com.thoughtworks.xstream.**"
-        });
-        return xstream;
-    }
-
-    @Bean
-    @Primary
-    public Serializer serializer(XStream xStream) {
-        return XStreamSerializer.builder().xStream(xStream).build();
-    }
+//    @Bean
+//    XStream xstream(){
+//        XStream xstream = new XStream();
+//        xstream.addPermission(NoTypePermission.NONE);
+//        xstream.allowTypesByWildcard(new String[] {
+//                "tech.dimitar.**",
+//                "org.axonframework.**",
+//                "java.**",
+//                "com.thoughtworks.xstream.**"
+//        });
+//        return xstream;
+//    }
+//
+//    @Bean
+//    @Primary
+//    public Serializer serializer(XStream xStream) {
+//        return XStreamSerializer.builder().xStream(xStream).build();
+//    }
 }

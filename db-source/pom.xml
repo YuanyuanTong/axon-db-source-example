@@ -7,21 +7,21 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.5.6</version>
+		<version>2.4.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 
 	<groupId>tech.dimitar.axon</groupId>
 	<artifactId>db-source</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>db-source</name>
 	<description>Demo project for Spring Boot</description>
 
 
 	<properties>
 		<java.version>11</java.version>
-		<axon.version>4.3.4</axon.version>
+		<axon.version>4.4.3</axon.version>
 		<xstream.version>1.4.18</xstream.version>
 	</properties>
 
@@ -36,14 +36,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-		<!-- Postgres -->
-		<dependency>
-			<groupId>org.postgresql</groupId>
-			<artifactId>postgresql</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-
 
 		<!-- Axon -->
 		<dependency>
@@ -73,6 +65,19 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
 	</dependencies>
 
 	<build>
